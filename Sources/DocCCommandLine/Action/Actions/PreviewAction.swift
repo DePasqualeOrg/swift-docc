@@ -25,6 +25,7 @@ fileprivate func trapSignals() {
             for server in servers.values {
                 try server.stop()
             }
+            exit(0)
         } catch {
             print(error.localizedDescription)
             exit(1)
